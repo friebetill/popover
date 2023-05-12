@@ -97,14 +97,7 @@ class PopoverPositionRenderObject extends RenderShiftedBox {
   double _horizontalOffset(Size size) {
     var offset = 0.0;
 
-    if (attachRect.left > size.width / 2 &&
-        Utils().screenWidth - attachRect.right > size.width / 2) {
       offset = attachRect.left + attachRect.width / 2 - size.width / 2;
-    } else if (attachRect.left < size.width / 2) {
-      offset = arrowHeight;
-    } else {
-      offset = Utils().screenWidth - arrowHeight - size.width;
-    }
     return offset;
   }
 
